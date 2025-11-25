@@ -1,0 +1,374 @@
+/* =====================
+   THEME + RESET
+===================== */
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  font-family: Inter, Poppins, Roboto, Arial, sans-serif;
+  line-height: 1.6;
+  color: #111827;              /* chữ chính */
+  background: #F3F4F6;         /* background chung */
+}
+
+img { max-width: 100%; display: block; }
+
+.container {
+  width: min(1150px, 92%);
+  margin: 0 auto;
+}
+
+/* =====================
+   NAVBAR
+===================== */
+.site-header {
+  background: #FFFFFF;
+  border-bottom: 1px solid #E5E7EB;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.navbar {
+  display: flex;
+  gap: 18px;
+  padding: 14px 0;
+}
+
+.navbar a {
+  color: #4B5563;
+  text-decoration: none;
+  padding: 6px 8px;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color .2s ease, transform .2s ease, background .2s ease;
+}
+
+.navbar a:hover {
+  color: #111827;
+  transform: translateY(-1px);
+  background: #F9FAFB;
+}
+
+.navbar a.active {
+  color: #2563EB;
+  font-weight: 700;
+}
+
+/* =====================
+   BUTTONS / LINKS
+===================== */
+.btn {
+  display: inline-block;
+  background: #2563EB;
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 10px;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background .2s ease, box-shadow .2s ease, transform .2s ease;
+}
+
+.btn:hover {
+  background: #1D4ED8;
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.25);
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  background: transparent;
+  color: #2563EB;
+  border: 1.5px solid #2563EB;
+}
+
+.btn-outline:hover {
+  background: #EFF6FF;
+  color: #1D4ED8;
+}
+
+.link {
+  text-decoration: none;
+  color: #2563EB;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color .2s ease, transform .2s ease;
+}
+
+.link:hover {
+  color: #1D4ED8;
+  transform: translateY(-1px);
+}
+
+/* =====================
+   HERO (Home background thiên nhiên)
+===================== */
+.hero-section {
+  background: url("../assets/hero-bg.jpg") center/cover no-repeat;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 60px 0;
+}
+
+.hero-section::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(243, 244, 246, 0.75);
+}
+
+.hero-overlay {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 28px;
+  align-items: center;
+}
+
+.hero-card {
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 16px;
+  padding: 32px 34px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+}
+
+.hero-card h1 {
+  font-size: 36px;
+  font-weight: 700;
+  margin: 0 0 8px;
+  color: #111827;
+}
+
+.subtitle {
+  color: #6B7280;
+  margin-top: 0;
+  margin-bottom: 14px;
+}
+
+.hero-card p { color: #6B7280; }
+
+.hero-actions {
+  margin-top: 16px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.hero-avatar img {
+  background: #FFFFFF;
+  border: 1px solid #E5E7EB;
+  border-radius: 12px;
+  padding: 6px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+  width: 100%;
+  max-width: 360px;
+  margin-left: auto;
+}
+
+/* =====================
+   CARDS
+===================== */
+.card {
+  background: #FFFFFF;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid #E5E7EB;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+}
+
+.card h3, .card h2 {
+  color: #111827;
+  margin-top: 0;
+}
+
+.card p { color: #6B7280; }
+
+.mini-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  padding: 22px 0 44px;
+}
+
+/* =====================
+   ABOUT
+===================== */
+.about-page { padding: 30px 0 44px; }
+
+.about-wrapper {
+  background: #FFFFFF;
+  border-radius: 16px;
+  padding: 36px;
+  border: 1px solid #E5E7EB;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+
+.about-hero {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 20px;
+  align-items: center;
+}
+
+.avatar-lg {
+  width: 220px;
+  background: #FFFFFF;
+  border-radius: 12px;
+  border: 1px solid #E5E7EB;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+  padding: 6px;
+}
+
+.about-section { margin-top: 28px; }
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+/* Goal box nhẹ */
+.goal-box {
+  border: 1px solid #DBEAFE;
+  background: #F9FAFB;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+/* =====================
+   PROJECTS
+===================== */
+.page-title { margin: 26px 0 6px; }
+.page-subtitle { margin-top: 0; color: #6B7280; }
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  padding: 16px 0 44px;
+}
+
+.project-card {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 16px;
+  background: #FFFFFF;
+  border-radius: 12px;
+  border: 1px solid #E5E7EB;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  overflow: hidden;
+}
+
+.project-content { padding: 12px 14px; }
+
+.tags {
+  display: flex;
+  gap: 6px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+
+.tags span {
+  background: #EFF6FF;
+  color: #2563EB;
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  border: 1px solid #DBEAFE;
+}
+
+/* =====================
+   CONTACT
+===================== */
+.contact-page { padding: 26px 0 44px; }
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 16px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  margin: 6px 0 12px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #E5E7EB;
+  background: #FFFFFF;
+}
+
+.error { color: #c00; margin-top: 6px; }
+.success { color: #0a7; margin-top: 6px; }
+
+/* =====================
+   FOOTER
+===================== */
+.site-footer {
+  text-align: center;
+  padding: 18px;
+  background: #FFFFFF;
+  border-top: 1px solid #E5E7EB;
+  color: #6B7280;
+}
+
+/* =====================
+   Background Pattern hình học mờ (chấm)
+   góc trên trái + dưới phải
+===================== */
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  width: 380px;
+  height: 380px;
+  z-index: -1;
+  opacity: 0.18;
+  pointer-events: none;
+  background-image: radial-gradient(#2563EB 1px, transparent 1px);
+  background-size: 16px 16px;
+}
+
+body::before { top: -120px; left: -120px; }
+body::after  { bottom: -120px; right: -120px; }
+
+/* =====================
+   BACK TO TOP
+===================== */
+#toTop {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  display: none;
+  padding: 10px 12px;
+  border-radius: 999px;
+  font-size: 14px;
+  box-shadow: 0 6px 16px rgba(37,99,235,0.25);
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 900px) {
+  .hero-overlay { grid-template-columns: 1fr; }
+  .hero-avatar img { margin: 0 auto; max-width: 260px; }
+  .mini-cards { grid-template-columns: 1fr; }
+  .skills-grid { grid-template-columns: 1fr; }
+  .project-card { grid-template-columns: 1fr; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .about-hero { grid-template-columns: 1fr; }
+}

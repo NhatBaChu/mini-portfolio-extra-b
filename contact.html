@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Portfolio</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="site-header">
+    <nav class="navbar container">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="container contact-page">
+    <h1 class="page-title">Contact Me</h1>
+    <p class="page-subtitle">Feel free to reach out using the form below.</p>
+
+    <section class="contact-grid">
+
+      <div class="contact-info card">
+        <h2>Info</h2>
+        <p><b>Full name:</b> Nguyễn Lương Nhật</p>
+        <p><b>Student ID:</b> AUS14988</p>
+        <p>
+          <b>Email:</b>
+          <a class="link" href="mailto:luongnhat31012007@gmail.com">
+            luongnhat31012007@gmail.com
+          </a>
+        </p>
+<p>
+  <b>GitHub:</b>
+  <a class="link" href="https://github.com/NhatBaChu" target="_blank">
+    github.com/NhatBaChu
+  </a>
+</p>
+
+      </div>
+
+      <form id="contactForm" class="contact-form card">
+        <label>Your name</label>
+        <input id="name" type="text" placeholder="Your name..." />
+
+        <label>Your email</label>
+        <input id="email" type="email" placeholder="your@email.com" />
+
+        <label>Message</label>
+        <textarea id="message" rows="5" placeholder="Write your message..."></textarea>
+
+        <button type="submit" class="btn">Send</button>
+        <p id="error" class="error"></p>
+        <p id="success" class="success"></p>
+      </form>
+
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© 2025 Nguyễn Lương Nhật (AUS14988) — Portfolio</p>
+  </footer>
+
+  <button id="toTop" class="btn">↑ Top</button>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
